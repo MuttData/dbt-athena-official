@@ -137,7 +137,7 @@
             {%- endfor %}
       {%- endif %}
       {% if not_match_delete_condition is not none -%}
-          when not matched and ({{ not_match_delete_condition }})
+          when not matched and {{ not_match_delete_condition }}
           then delete
       {%- endif %}
       when not matched {% if insert_condition is not none -%} and {{ insert_condition }} {%- endif %}
